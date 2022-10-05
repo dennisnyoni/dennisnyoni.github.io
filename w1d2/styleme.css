@@ -1,0 +1,10 @@
+div.movies {
+	float: right;
+	position: relative;
+	bolder: 3px solid #73AD21;
+}
+
+div.courses {
+	position: static;
+	bolder: 1px solid #73AD21;
+}
