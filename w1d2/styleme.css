@@ -50,8 +50,11 @@ a:hover { text-decoration: underline;}
 a:visited { text-decoration: black;}
 
 p::first-letter{
-	text-transform: drop-caps; 
+	 
 	font-size: 1.5em;
+	line-height:1;
+	float:left;
+   margin:5px 5px -7px 0;
 }
 
 ol{
@@ -62,13 +65,10 @@ ol{
 
 ol ol{
 	list-style-type: none;
-	font-weight:none;
+	font-weight:normal;
 }
 
-ol ul ol{
-	list-style-type: none;
-	
-}
+
 ol ol ol ol{
 	list-style-type: lower-roman;
 	font-style: italic;
