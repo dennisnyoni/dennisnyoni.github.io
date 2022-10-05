@@ -1,11 +1,16 @@
-div.movies {
-	float: right;
+#movies {
+	float: center;
 	position: relative;
-	bolder: 3px solid #73AD21;
+	border: 3px solid aqua;
+	
+	
 }
-
-div.courses {
-	position: static;
-	bolder: 1px solid #73AD21;
+#courses {
+	float: left;
+	position: relative;
+	border: 3px solid black;
 	background-color:aqua
+}
+body{
+	background:aqua;
 }
