@@ -20,7 +20,8 @@ a{
 
 span {
 	font-family: Tahoma bold italic;
-	color: gray;
+	color: blue;
+	font-size:30px;
 }
 
 p{
