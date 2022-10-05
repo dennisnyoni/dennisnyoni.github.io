@@ -30,8 +30,6 @@ p{
 	margin: 30px;
 }
 
-
-
 h1 {
 	font-family: Georgia;
 	color: brown;
@@ -40,4 +38,40 @@ h1 {
 
 h2 {
 	color: magenta;
+}
+
+a:link {text-decoration: none;color: green;}
+
+a:active {text-decoration: green;}
+
+a:hover { text-decoration: underline;}
+
+a:visited { text-decoration: black;}
+
+p::first-letter{
+	text-transform: drop-caps; 
+	font-size: 1.5em;
+}
+
+ol{
+	font-weight:bold;
+}
+
+ol ul{
+	list-style-type: none;
+	
+}
+
+ol ol{
+	list-style-type: lower-roman;
+	font-weight:none;
+}
+
+ol ul ol{
+	list-style-type: none;
+	
+}
+ol ul ol ol{
+	list-style-type: lower-roman;
+	font-style: italic;
 }
