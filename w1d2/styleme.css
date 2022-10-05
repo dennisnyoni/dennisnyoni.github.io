@@ -58,13 +58,10 @@ ol{
 	font-weight:bold;
 }
 
-ol ul{
-	list-style-type: none;
-	
-}
+
 
 ol ol{
-	list-style-type: lower-roman;
+	list-style-type: none;
 	font-weight:none;
 }
 
@@ -72,7 +69,7 @@ ol ul ol{
 	list-style-type: none;
 	
 }
-ol ul ol ol{
+ol ol ol ol{
 	list-style-type: lower-roman;
 	font-style: italic;
 }
