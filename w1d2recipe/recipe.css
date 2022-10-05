@@ -1,0 +1,22 @@
+h2 {
+    color: green;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    color: green;
+}
+
+ol {
+    font-weight: bold;
+}
+
+ol ul {
+    font-weight: lighter;
+}
+
+div.comment {
+    background-color: orange;
+    width: 30%;
+}
