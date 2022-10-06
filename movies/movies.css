@@ -31,7 +31,7 @@ div.main-container#parent {
     margin-left: 20pc;
     margin-right: 20pc;
     margin-bottom: 0%;
-    background-color: lime;
+    background-color: lightgreen;
 }
 
 #rottenbig {
@@ -126,4 +126,10 @@ div#second-parent>flex-child-element {
 
 #twentieth-child {
     border: 0px;
+}
+
+#foot {
+    display: flex;
+    justify-content: center;
+    position: absolute;
 }
