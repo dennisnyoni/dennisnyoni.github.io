@@ -33,11 +33,11 @@ ul ul {
 
 div.main-container#parent {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 75% 25%;
     border: 5px solid grey;
     border-radius: 12px;
-    margin-left: 20pc;
-    margin-right: 20pc;
+    margin-left: 15pc;
+    margin-right: 15pc;
     margin-bottom: 0%;
     background-color: lightgreen;
 }
