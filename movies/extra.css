@@ -1,0 +1,217 @@
+.TotalExt-Scope a:hover .Icon:not(.Icon--error) .Icon__Path,
+.TotalExt-Scope a.active .Icon:not(.Icon--error) .Icon__Path {
+    fill: #2c3035
+}
+
+.TotalExt-Theme-dark .TotalExt-Scope a:hover .Icon:not(.Icon--error) .Icon__Path,
+.TotalExt-Theme-dark .TotalExt-Scope a.active .Icon:not(.Icon--error) .Icon__Path {
+    fill: #fff
+}
+
+.TotalExt-Scope .Icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center
+}
+
+.TotalExt-Scope .Icon>div {
+    display: inline-flex
+}
+
+.TotalExt-Scope .Icon>div>div {
+    display: inline-flex
+}
+
+.TotalExt-Scope .Icon svg {
+    max-width: 100%
+}
+
+.TotalExt-Scope .Icon__Path {
+    fill: #979797;
+    transition: all 0.3s ease-in-out;
+    transition-property: fill
+}
+
+.TotalExt-Theme-dark .TotalExt-Scope .Icon__Path {
+    fill: #fff
+}
+
+.TotalExt-Scope .Icon__Stroke {
+    stroke: #979797;
+    transition: all 0.3s ease-in-out;
+    transition-property: stroke
+}
+
+.TotalExt-Theme-dark .TotalExt-Scope .Icon__Stroke {
+    stroke: #fff
+}
+
+.TotalExt-Scope .Icon--ads {
+    width: 1.46667rem;
+    height: 1.46667rem
+}
+
+.TotalExt-Scope .Icon--android,
+.TotalExt-Scope .Icon--apple {
+    width: 0.93333rem;
+    height: 1.06667rem
+}
+
+.TotalExt-Scope .Icon--arrow-right {
+    width: 0.93333rem;
+    height: 0.66667rem
+}
+
+.TotalExt-Scope .Icon--chevron-back {
+    width: 0.46667rem;
+    height: 0.8rem
+}
+
+.TotalExt-Scope .Icon--chevron-down {
+    width: 0.66667rem;
+    height: 0.4rem
+}
+
+.TotalExt-Scope .Icon--chevron-right {
+    width: 0.66667rem;
+    height: 1.2rem
+}
+
+.TotalExt-Scope .Icon--close-cross {
+    width: 0.66667rem;
+    height: 0.66667rem
+}
+
+.TotalExt-Scope .Icon--download {
+    width: 1.6rem;
+    height: 1.46667rem
+}
+
+.TotalExt-Scope .Icon--taboola {
+    width: 1.6rem;
+    height: 1.6rem
+}
+
+.TotalExt-Scope .Icon--list {
+    width: 1.46667rem;
+    height: 1.46667rem
+}
+
+.TotalExt-Scope .Icon--logout {
+    width: 1.06667rem;
+    height: 1.06667rem
+}
+
+.TotalExt-Scope .Icon--seconds {
+    width: 1.4rem;
+    height: 1.6rem
+}
+
+.TotalExt-Scope .Icon--toggle-check {
+    width: 0.8rem;
+    height: 0.66667rem
+}
+
+.TotalExt-Scope .Icon--trash {
+    width: 1rem;
+    height: 1.06667rem
+}
+
+.TotalExt-Scope .Icon--trackers {
+    width: 1.6rem;
+    height: 1.6rem
+}
+
+.TotalExt-Scope .Icon--trustpilot-logo .Icon__Path {
+    fill: #1D2023
+}
+
+.TotalExt-Theme-dark .TotalExt-Scope .Icon--trustpilot-logo .Icon__Path {
+    fill: #fff
+}
+
+.TotalExt-Scope .Icon--home,
+.TotalExt-Scope .Icon--features,
+.TotalExt-Scope .Icon--settings {
+    height: 1.33333rem;
+    width: 1.33333rem
+}
+
+.TotalExt-Scope .Icon--grey .Icon__Path {
+    fill: #979797
+}
+
+.TotalExt-Theme-dark .TotalExt-Scope .Icon--grey .Icon__Path {
+    fill: #fff
+}
+
+.TotalExt-Scope .Icon--dark-grey .Icon__Path {
+    fill: #2c3035
+}
+
+.TotalExt-Theme-dark .TotalExt-Scope .Icon--dark-grey .Icon__Path {
+    fill: #fff
+}
+
+.TotalExt-Scope .Icon--medium-grey .Icon__Path {
+    fill: #5a636d
+}
+
+.TotalExt-Theme-dark .TotalExt-Scope .Icon--medium-grey .Icon__Path {
+    fill: #fff
+}
+
+.TotalExt-Scope .Icon--primary .Icon__Path {
+    fill: #0BC86D
+}
+
+.TotalExt-Scope .Icon--black .Icon__Path {
+    fill: #1D2023
+}
+
+.TotalExt-Theme-dark .TotalExt-Scope .Icon--black .Icon__Path {
+    fill: #fff
+}
+
+.TotalExt-Scope .Icon--white .Icon__Path {
+    fill: #fff
+}
+
+.TotalExt-Scope .Icon--error .Icon__Path {
+    fill: #E63748
+}
+
+.TotalExt-Scope .Logo {
+    min-height: 2.66667rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.53333rem
+}
+
+.TotalExt-Scope .Logo img {
+    height: 100%;
+    max-width: 100%
+}
+
+.TotalExt-Scope .Logo__ByParent {
+    width: 100%;
+    padding-left: 38%;
+    font-weight: 400;
+    color: #1D2023
+}
+
+.TotalExt-Theme-dark .TotalExt-Scope .Logo__ByParent {
+    color: #fff
+}
+
+.TotalExt-Scope .Logo__ByParent span {
+    font-weight: 700
+}
+
+.TotalExt-Scope .Logo--text-only {
+    min-height: 1.33333rem
+}
+
+.TotalExt-Scope .Logo--by-parent {
+    justify-content: flex-start
+}
