@@ -13,6 +13,14 @@ h1#tmnt {
     background-image: url("../images/bannerbg.png");
 }
 
+#general-overview {
+    border-bottom-right-radius: 12pt;
+}
+
+#general-overview>img {
+    height: 100%;
+}
+
 ul {
     list-style-type: none;
     font-weight: bold;
@@ -46,8 +54,7 @@ div.main-container#parent {
     color: red;
 }
 
-div.right-column {
-    background: green;
+.right-column {
     /*width: 30%;*/
 }
 
