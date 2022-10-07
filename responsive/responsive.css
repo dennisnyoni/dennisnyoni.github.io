@@ -17,7 +17,7 @@
 }*/
 
 .flex-child-element#second-outer-child {
-    display: fix;
+    display: flex;
     justify-content: left;
     background-color: rgb(46, 83, 83);
     font-weight: bold;
