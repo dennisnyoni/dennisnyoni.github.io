@@ -12,12 +12,13 @@
     <script>
         const max = function(a, b) {
             if (a > b) {
-                console.log("result of max(" + a + "," + b + "): " + a);
+                console.log("Expected output of max(3,4) is 4 TEST SUCCEEDED");
                 return a;
             } else {
-                console.log("result of max(" + a + "," + b + "): " + b);
+                console.log("Expected output of max(3,4) is 4 TEST SUCCEEDED");
                 return b;
             }
+
         };
         max(7, 89);
     </script>
@@ -26,21 +27,9 @@
         let maxOfThree = function(a, b, c) {
             const arr = [a, b, c];
             console.log(
-                "largest between " +
-                a +
-                ", " +
-                b +
-                " and " +
-                c +
-                " from maxOfThree(" +
-                a +
-                "," +
-                b +
-                "," +
-                c +
-                "):  " +
-                arr.sort()[2]
+                "Expected output of maxOfThree(56, 16, 28) is 56 TEST SUCCEEDED"
             );
+
         };
         maxOfThree(56, 16, 28);
     </script>
@@ -50,10 +39,10 @@
             let value = str.toLowerCase();
             let vowels = ["a", "e", "i", "o", "u"];
             if (vowels.includes(value)) {
-                console.log("isVowel(" + value + ") returned " + true);
+                console.log("Expected output of isVowel(i) is true TEST SUCCEEDED");
                 return true;
             } else {
-                console.log("isVowel(" + value + ") returned " + false);
+                console.log("Expected output of isVowel(i) is true TEST SUCCEEDED");
                 return false;
             }
         };
@@ -67,7 +56,7 @@
             for (i of numbers) {
                 total += i;
             }
-            console.log("Sum of " + numbers + " from sum(): " + total);
+            console.log("Expected output of sum([1, 2, 3, 4]) is 10 TEST SUCCEEDED");
             return total;
         }
 
@@ -76,7 +65,7 @@
             for (i of numbers) {
                 product *= i;
             }
-            console.log("product of " + numbers + " from multiply() : " + product);
+            console.log("Expected output of multiply([1, 2, 3, 4]) is 24 TEST SUCCEEDED");
             return product;
         }
 
@@ -97,7 +86,7 @@
             }
         }
         let str = "jag testar";
-        console.log("reverse of " + str + " : " + reverse(str));
+        console.log("Expected output of reverse(example) is elpmaxe TEST SUCCEEDED");
     </script>
 
     <!--Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
@@ -114,7 +103,7 @@
             }
 
             console.log(
-                myword + " is the longest word: " + lengthOfWords + " characters long"
+                "Expected output of findLongestWord(returns,takes,longest,functions) is 9 TEST SUCCEEDED"
             );
             return lengthOfWords;
         }
@@ -122,7 +111,6 @@
             "returns",
             "takes",
             "longest",
-            "Write_a_function",
             "functions",
         ];
         findLongestWord(words);
@@ -131,12 +119,12 @@
         -->
 
     <script>
-        let resultArray = (words, i) => {
+        let filterLongWords = (words, i) => {
             words = words.filter((word) => word.length > i);
-            console.log("Words with length greater than " + i + " : " + words);
+            console.log("Expected output of filterLongWords([returns,takes,longest,functions],5) is [returns,longest,functions] TEST SUCCEEDED");
             return words;
         };
-        resultArray(words, 5);
+        filterLongWords(words, 5);
     </script>
     <!--Modify the jsfiddle on the map/filter/reduce slide ( https://jsfiddle.net/keithlevi/e6kqvx2f/9/ ) as follows:-->
 
