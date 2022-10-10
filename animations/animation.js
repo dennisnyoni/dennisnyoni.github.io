@@ -38,7 +38,20 @@ window.onload = function() {
 
     function onSizeSelector() {
         var selectedValue = sizeSelector.value;
-        textArea.style.fontSize = selectedValue + "px";
+        if (selectedValue == "Tiny") {
+            textArea.style.fontSize = "8px";
+        } else if (selectedValue == "Small") {
+            textArea.style.fontSize = "12px";
+        } else if (selectedValue == "Medium") {
+            textArea.style.fontSize = "16px";
+        } else if (selectedValue == "Large") {
+            textArea.style.fontSize = "20px";
+        } else if (selectedValue == "Extra Large") {
+            textArea.style.fontSize = "24px";
+        } else if (selectedValue == "XXL") {
+            textArea.style.fontSize = "30px";
+        }
+
     }
 
     function onSpeedSelector() {
