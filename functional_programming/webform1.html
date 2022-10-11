@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webform1.css">
+    <script src="validate.js"></script>
+    <title>Regex</title>
+</head>
+
+<body>
+
+    <form action="#">
+        <div class="container">
+            <div>
+                <label for="email">Email address</label>
+            </div>
+            <div>
+                <input id="email" type="text" placeholder="Enter email">
+            </div>
+            <div>
+                <p id="faded-test">We'll never share your email with anyone else.</p>
+
+            </div>
+            <div>
+                <label for="password">Password</label>
+            </div>
+            <div>
+                <input id="password" type="password" placeholder="Password">
+            </div>
+            <div>
+                <input type="checkbox" name="check-me" id="check-me-out">Check me out</input>
+            </div>
+            <div>
+                <label for="httpAddress">Address</label>
+            </div>
+            <div>
+                <input id="httpAddress" type="text" placeholder="https://">
+            </div>
+            <div>
+                <input onclick="validate()" type="submit" value="Submit">
+            </div>
+
+        </div>
+
+    </form>
+
+</body>
+
+</html>

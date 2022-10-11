@@ -1,0 +1,10 @@
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 20px;
+}
+
+p {
+    font-weight: lighter;
+    opacity: 0.5;
+}
