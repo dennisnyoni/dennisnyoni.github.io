@@ -1,6 +1,30 @@
 <script>
     "use strict";
+    /* let array = [1, 2, 3, 4];
+       let sum = array.reduce(function(number, current) {
+           return number + current;
+       });
+       console.log(sum);
+
+       let multiply = array.reduce(function(number, current) {
+           return number * current;
+       });
+       console.log(multiply);*/
+
+    "use strict";
     let array = [1, 2, 3, 4];
+    let word = "hello";
+    let words = [
+        "first",
+        "second",
+        "third",
+        "fourth",
+        "fifth",
+        "sixth",
+        "seven",
+        "eight",
+        "nine",
+    ];
     let sum = array.reduce(function(number, current) {
         return number + current;
     });
@@ -10,4 +34,22 @@
         return number * current;
     });
     console.log(multiply);
+
+    //let reverse = word.map(reverseString(word));
+    //console.log(reverse);
+
+    function reverseString(str) {
+        if (str.length > 0) {
+            return reverseString(str.substring(1)) + str.charAt(0);
+        } else {
+            return "";
+        }
+    }
+
+    console.log(reverseString(word));
+
+    let filterLongWords = words.filter(function(str, i) {
+        return str.length > i;
+    });
+    console.log(filterLongWords(words, 5));
 </script>
