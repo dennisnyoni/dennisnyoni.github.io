@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js objects</title>
+</head>
+
+<body>
+    <script>
+        /* const module = (function() {
+                                                                                                                                                                                                                                                                                                                                                                            let counter = 0;
+                                                                                                                                                                                                                                                                                                                                                                            const add = function() {
+                                                                                                                                                                                                                                                                                                                                                                                return (counter += 15);
+                                                                                                                                                                                                                                                                                                                                                                            };
+                                                                                                                                                                                                                                                                                                                                                                            const reset = function() {
+                                                                                                                                                                                                                                                                                                                                                                                return (counter = 0);
+                                                                                                                                                                                                                                                                                                                                                                            };
+                                                                                                                                                                                                                                                                                                                                                                            return {
+                                                                                                                                                                                                                                                                                                                                                                                add: add(),
+                                                                                                                                                                                                                                                                                                                                                                                reset: reset(),
+                                                                                                                                                                                                                                                                                                                                                                            };
+                                                                                                                                                                                                                                                                                                                                                                        })();
+
+                                                                                                                                                                                                                                                                                                                                                                        console.log(module.add);
+                                                                                                                                                                                                                                                                                                                                                                        console.log(module.reset);
+
+                                                                                                                                                                                                                const add_reset = (function() {
+                                                                                                                                                                                                                    var counter = 0;
+
+                                                                                                                                                                                                                    const add = function(inc) {
+                                                                                                                                                                                                                        return counter += inc;
+                                                                                                                                                                                                                    };
+                                                                                                                                                                                                                    const reset = function() {
+                                                                                                                                                                                                                        return counter = 0;
+                                                                                                                                                                                                                    };
+                                                                                                                                                                                                                    const make_adder = function(inc) {
+                                                                                                                                                                                                                        return add(inc);
+                                                                                                                                                                                                                    };
+
+                                                                                                                                                                                                                    return {
+                                                                                                                                                                                                                        count: add,
+                                                                                                                                                                                                                        reset: reset,
+                                                                                                                                                                                                                        adder: make_adder,
+                                                                                                                                                                                                                    };
+                                                                                                                                                                                                                })();
+                                                                                                                                                                                                                let add5 = add_reset.adder;
+                                                                                                                                                                                                                let add7 = add_reset.adder;
+                                                                                                                                                                                                                let setZero = add_reset.reset;
+                                                                                                                                                                                                                add5(5);
+                                                                                                                                                                                                                add5(5);
+                                                                                                                                                                                                                console.log("make_adder add5: " + add5(5));
+                                                                                                                                                                                                                setZero()
+                                                                                                                                                                                                                add7(7);
+                                                                                                                                                                                                                add7(7);
+                                                                                                                                                                                                                console.log("make_adder add7: " + add7(7));
+                                                                                                                                                                                                                
+                                                                                                                                                                                                                */
+        const employee = (function() {
+            var name = null;
+            var age = 0;
+            var salary = 0.0;
+
+            const setName = function(myname) {
+                name = myname;
+            };
+
+            const getName = function() {
+                return name;
+            };
+
+            const setAge = function(myage) {
+                age = myage;
+            };
+
+            const getAge = function() {
+                return age;
+            };
+
+            const setSalary = function(mysalary) {
+                salary = mysalary;
+                console.log("salary: " + salary);
+            };
+
+            const getSalary = function() {
+                return salary;
+            };
+
+            const increaseSalary = function(percentage) {
+                return getSalary() + (getSalary() * percentage) / 100;
+            };
+
+            const incrementAge = function() {
+                return getAge() + 1;
+            };
+
+            return {
+                nameSetter: setName,
+                nameGetter: getName,
+                ageSetter: setAge,
+                ageIncrementer: incrementAge,
+                salarySetter: setSalary,
+                salaryIncreaser: increaseSalary,
+            };
+        })();
+
+        var empNameSet = employee.nameSetter;
+        var empNameGet = employee.nameGetter;
+        var empAgeIncrementer = employee.ageIncrementer;
+        var empAgeSet = employee.ageSetter;
+        var empSalarySet = employee.salarySetter;
+        var empSalaryIncrementer = employee.salaryIncreaser;
+        empNameSet("Joshua");
+        console.log(empNameGet());
+        empAgeSet(25);
+        console.log(empAgeIncrementer());
+        empSalarySet(145.67);
+        console.log(empSalaryIncrementer(10));
+
+        employee.extension = function() {
+            var address;
+            const setAddress = function(myAddress) {
+                address = myAdress;
+            };
+            const getAddress = function() {
+                return address;
+            };
+        };
+    </script>
+</body>
+
+</html>

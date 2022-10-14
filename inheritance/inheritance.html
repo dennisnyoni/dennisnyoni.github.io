@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+
+</head>
+
+<body>
+    <p>Resuts of the code for this exercise is in the console.
+        <br /> input to filter is "just the elements from the given array that pass the test" banned words [the,from]
+        <br /> input to bubbleSort is [6, 4, 0, 3, -2, 1]
+    </p>
+    <script>
+        let sentence = "just the elements from the given array that pass the test";
+        String.prototype.filter = function(...bannedWords) {
+            let newWord = this;
+            for (bannedWord of bannedWords) {
+                if (newWord.includes(bannedWord)) {
+                    console.log(bannedWord);
+                    newWord = newWord.replaceAll(bannedWord, "");
+                }
+            }
+            return newWord;
+        }
+        console.log(sentence.filter("the", "from"));
+
+        let arr = [6, 4, 0, 3, -2, 1];
+        Array.prototype.bubbleSort = function() {
+            for (let i = 0; i < this.length; i++) {
+                for (let j = 0; j < this.length - i - 1; j++) {
+                    if (this[j] > this[j + 1]) {
+                        let temp = arr[j];
+                        this[j] = this[j + 1];
+                        this[j + 1] = temp;
+                    }
+                }
+            }
+            return this;
+        };
+        console.log(arr.bubbleSort());
+
+        var Person = function() {};
+        Person.prototype.initialize = function(name, age) {
+            this.name = name;
+            this.age = age;
+        };
+
+        Person.prototype.describe = function() {
+            return this.name + " " + this.age + " years old";
+        };
+
+        var Student = function() {};
+        Student.prototype = new Person();
+
+        Student.prototype.learn = function(subject) {
+            console.log(this.name + " just learned " + this.subject);
+        };
+
+        var Teacher = function() {};
+        Teacher.prototype = new Person();
+        Teacher.prototype.teach = function(subject) {
+            return this.name + " is now teaching " + subject;
+        };
+
+        let teacher = new Teacher();
+        teacher.initialize("Tompson", 38);
+        console.log(teacher.teach("Physics"));
+    </script>
+
+</body>
+
+</html>
