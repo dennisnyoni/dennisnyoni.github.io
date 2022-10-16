@@ -20,7 +20,6 @@
             let newWord = this;
             for (bannedWord of bannedWords) {
                 if (newWord.includes(bannedWord)) {
-                    console.log(bannedWord);
                     newWord = newWord.replaceAll(bannedWord, "");
                 }
             }
