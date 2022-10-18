@@ -68,6 +68,27 @@
         let teacher = new Teacher();
         teacher.initialize("Tompson", 38);
         console.log(teacher.teach("Physics"));
+
+        var Book = functions() {
+            /*this.type = type;
+            this.author = author;
+            this.getDetails = function () {
+                return this.type + " written by " + this.author;
+            }*/
+
+            let type = "fictions";
+            let author = "Peter King";
+            let getDetails = function() {
+                return type + " written by " + author;
+            };
+            /*return {
+                details: getDetails
+            }*/
+        };
+
+        var book = Book;
+
+        console.log(book.getDetails());
     </script>
 
 </body>
