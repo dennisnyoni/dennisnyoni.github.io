@@ -1,5 +1,6 @@
-let assert = chai.assert;
+// chai has a lot of stuff, let's make assert global
 
+let assert = chai.assert;
 
 /* ::::   Class Name => SavingAccount   :::: */
 
@@ -15,7 +16,7 @@ describe("getInterest(), SavingAccount", () => {
 describe("setInterest(value), SavingAccount", () => {
     it("should throw RangeError if the value passed is less than zero", () => {
         assert.throw(() => {
-            savingAccount.setInterest(-10) // interest = -10
+            savingAccount.setInterest(-10); // interest = -10
         }, RangeError);
     });
     it("should set new value to property 'interest' if the value is greater than zero.", () => {
@@ -31,15 +32,20 @@ describe("addInterest(), SavingAccount", () => {
 
 describe("toString(), SavingAccount", () => {
     it("should display the string representation of the SavingAccount", () => {
-        assert.deepEqual(savingAccount.toString(), `Balance after interest for Saving Account 1 is: 114.5`);
+        assert.deepEqual(
+            savingAccount.toString(),
+            `Balance after interest for Saving Account 1 is: 114.5`
+        );
     });
 });
 describe("endOfMonth(), SavingAccount", () => {
     it("should display Saving Account Statements at the end of a month", () => {
-        assert.deepEqual(savingAccount.endOfMonth(), `Interest added SavingAccount 1: balance: 131.1025 interest:14.5`)
+        assert.deepEqual(
+            savingAccount.endOfMonth(),
+            `Interest added SavingAccount 1: balance: 131.1025 interest:14.5`
+        );
     });
 });
-
 
 /* ::::   Class Name => CheckingAccount   :::: */
 let checkAccount = new CheckingAccount(2, 500);
@@ -53,7 +59,7 @@ describe("getOverDraftLimit(), CheckingAccount", () => {
 describe("setOverDraftLimit(value), CheckingAccount", () => {
     it("should throw RangeError if the value passed is less than zero", () => {
         assert.throw(() => {
-            checkAccount.setOverDraftLimit(-500) // overdraft limit = -500
+            checkAccount.setOverDraftLimit(-500); // overdraft limit = -500
         }, RangeError);
     });
     it("should set new value to property 'overDraftLimit' if the value is greater than zero.", () => {
@@ -64,12 +70,12 @@ describe("setOverDraftLimit(value), CheckingAccount", () => {
 describe("withdraw(value), CheckingAccount", () => {
     it("should throw RangeError if the value passed is less than zero", () => {
         assert.throw(() => {
-            checkAccount.withdraw(-400) // overdraft limit  = -400
+            checkAccount.withdraw(-400); // overdraft limit  = -400
         }, RangeError);
     });
     it("should throw RangeError if the person attempts to withdraw beyond the allowed overdraft limit", () => {
         assert.throw(() => {
-            checkAccount.withdraw(-200) // overdraft limit  = -200
+            checkAccount.withdraw(-200); // overdraft limit  = -200
         }, RangeError);
     });
     it("should set new value to property 'overDraftLimit' if the value is greater than zero.", () => {
@@ -79,15 +85,20 @@ describe("withdraw(value), CheckingAccount", () => {
 
 describe("toString(), CheckingAccount", () => {
     it("should display the string representation of the CheckingAccount", () => {
-        assert.deepEqual(checkAccount.toString(), `Balance of Checking Account 2 after withdrawal is: -500`);
+        assert.deepEqual(
+            checkAccount.toString(),
+            `Balance of Checking Account 2 after withdrawal is: -500`
+        );
     });
 });
 describe("endOfMonth(), CheckingAccount", () => {
     it("should display Checking Account statements at the end of a month", () => {
-        assert.deepEqual(checkAccount.endOfMonth(), `Warning, low balance CheckingAccount 2: balance: -500 limit: 500`)
+        assert.deepEqual(
+            checkAccount.endOfMonth(),
+            `Warning, low balance CheckingAccount 2: balance: -500 limit: 500`
+        );
     });
 });
-
 
 /* ::::   Class Name => Bank   :::: */
 let bank = new Bank();
