@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="clean_screen.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="clean_screen.js"></script>
+    <title>Clean Screen</title>
+</head>
+
+<body>
+    <div id="container">
+        <!--<div id="circle1" class="circle" onclick="kill()"></div>-->
+
+        <div id="input-container">
+            <label for="circle-width">Width</label>
+            <select name="width" id="circle-width">
+          <option value="50">50</option>
+          <option value="100">100</option>
+          <option value="150">150</option>
+          <option value="200">200</option>
+          <option value="250">250</option>
+          <option value="300">300</option>
+          <option value="350">350</option>
+          <option value="400">400</option>
+        </select>
+            <label for="circle-growth">Growth Amount</label>
+            <select name="growth" id="circle-growth">
+          <option value="10">50</option>
+          <option value="20">100</option>
+          <option value="30">150</option>
+          <option value="40">200</option>
+          <option value="50">250</option>
+          <option value="60">300</option>
+          <option value="70">350</option>
+          <option value="80">400</option>
+        </select>
+            <label for="growth-rate">Growth Rate</label>
+            <select name="growth" id="growth-rate">
+          <option value="1000">1000</option>
+          <option value="2000">2000</option>
+          <option value="3000">3000</option>
+          <option value="4000">4000</option>
+          <option value="5000">5000</option>
+          <option value="6000">6000</option>
+          <option value="7000">7000</option>
+          <option value="8000">8000</option>
+        </select>
+            <label for="circle-number">Circle Number</label>
+            <select name="circles" id="circle-number">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+            <button id="start" onclick="start()">Start</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
