@@ -2,29 +2,16 @@
 integrity = "sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 crossorigin = "anonymous" > < /script>*/
 "use strict";
+var growthAmount = $("#circle-growth").children("option:selected").val();
 var colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
     '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
     '#80B300', '#809900'
 ];
-let stop = false;
-
-function grow(growthRate) {
-
-    let width = parseInt($(this).css("width"));
-    let height = parseInt($(this).css("height"));
-    let newHeigth = height + growthRate + "px";
-    let newWidth = width + growthRate + "px";
-    $(".circle").css("width", newWidth);
-    $(".circle").css("height", newHeigth);
-    console.log("growing height: ");
-}
-
-function createCircles() {
-
-}
 
 function distroy() {
     stop = true;
+    $(".circle").css("width", 0);
+    $(".circle").css("height", 0);
     $("#circle1").hide();
 
 }
@@ -35,7 +22,6 @@ function kill() {
 
 function start() {
     let circlesNumber = $("#circle-number").children("option:selected").val();
-    let growthRate = $("#growth-rate").children("option:selected").val();
     let growthAmount = $("#circle-growth").children("option:selected").val();
     let circleWidth = $("#circle-width").children("option:selected").val();
 
@@ -51,11 +37,6 @@ function start() {
                 class: "circle",
                 width: circleWidth + "px",
                 height: circleWidth + "px",
-                backgroundColor: "red",
-
-                top: top + "px",
-                text: "circle",
-                color: "yellow",
 
                 css: {
                     "color": "yellow",
@@ -66,19 +47,26 @@ function start() {
                 },
                 click: function() {
                     $(this).hide();
-                }
+
+                },
+
             })
             .appendTo("#container");
-        console.log("color " + colorArray[i]);
-        console.log("margin left " + marginLeft + "px");
-        console.log("top " + top + "px");
-        console.log("circle number " + i);
-        console.log("margin-left " + marginLeft + "px");
     }
-    console.log(circlesNumber);
     //$("#circle1").show();
+    console.log("growth amount " + growthAmount);
+    setInterval(function grow() {
 
-    setInterval(grow(), 200);
+        let growthAmount = parseInt($("#circle-growth").children("option:selected").val());
+        let growthRate = $("#growth-rate").children("option:selected").val();
+        let width = parseInt($(".circle").css("width"));
+        let height = parseInt($(".circle").css("height"));
+
+        let newHeigth = (height + growthAmount) + "px";
+        let newWidth = (width + growthAmount) + "px";
+        $(".circle").css("width", newWidth);
+        $(".circle").css("height", newHeigth);
+    }, parseInt($("#growth-rate").children("option:selected").val()));
 
 
 }
